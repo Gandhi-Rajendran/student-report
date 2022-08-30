@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="User-img.jpeg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="script.js"></script>
+    <title>Student Report</title>
+  </head>
+  <body>
+    <div id="container">
+      <!-- Student Form -->
+      <form id="student-form" autocomplete="off">
+        <h3 id="form-title">STUDENT FORM</h3>
+        <div>
+          <input
+            type="number"
+            name="rollno"
+            id="rollno"
+            min="1"
+            placeholder="Roll No"
+            autofocus
+          />
+          <p id="rollno-error" class="error">*Enter the Roll No</p>
+        </div>
+        <div>
+          <input type="text" name="name" id="name" placeholder="Name" />
+          <p id="name-error" class="error">*Enter the Name</p>
+        </div>
+        <div>
+          <select name="subject" id="subject">
+            <option selected hidden value="">Subject</option>
+            <option value="Tamil">Tamil</option>
+            <option value="English">English</option>
+            <option value="Maths">Maths</option>
+            <option value="Science">Science</option>
+            <option value="Social">Social</option>
+          </select>
+          <p id="subject-error" class="error">*Enter the Subject</p>
+        </div>
+        <div>
+          <input
+            type="number"
+            name="mark"
+            id="mark"
+            min="0"
+            max="100"
+            placeholder="Mark"
+          />
+          <p id="mark-error" class="error">*Enter the Mark</p>
+        </div>
+        <div>
+          <input type="number" name="age" id="age" min="0" placeholder="Age" />
+          <p id="age-error" class="error">*Enter the Age</p>
+        </div>
+        <div>
+          <button id="submit-btn" type="submit">Submit</button>
+        </div>
+      </form>
+
+      <!-- Student Report -->
+      <table id="student-report">
+        <h3 id="report-title">STUDENT REPORT</h3>
+        <div id="search-container">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Student Name Search....."
+            onkeyup="searchFilter()"
+          />
+        </div>
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Roll No</th>
+            <th id="s-name">Name</th>
+            <th>Subject</th>
+            <th id="s-mark">Mark</th>
+            <th>Age</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="report-list"></tbody>
+      </table>
+    </div>
+  </body>
+</html>

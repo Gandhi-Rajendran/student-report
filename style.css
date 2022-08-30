@@ -1,0 +1,138 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow-x:hidden;
+}
+body {
+  counter-reset: Serial;
+}
+#container {
+  width: 100vw;
+  padding: 3%;
+  background-color: lightgray;
+}
+/* student Form */
+#form-title {
+  margin: 12px;
+  text-align: center;
+  color: darkblue;
+}
+#student-form {
+  max-width: 500px;
+  margin: 5% auto;
+  padding: 18px;
+  border-radius: 18px;
+  background-color: white;
+}
+#student-form div {
+  display: flex;
+  flex-direction: column;
+}
+#student-form input {
+  background-color: #f2f3f4;
+  font-size: 14px;
+  margin: 12px 18px;
+  padding: 9px;
+  border: none;
+  border: 5px soild greenyellow;
+  border-radius: 5px;
+}
+#subject {
+  font-size: 14px;
+  margin: 16px 18px;
+  padding: 9px;
+  border: none;
+  border-radius: 5px;
+}
+#student-form #submit-btn {
+  width: 45%;
+  margin: 8px auto;
+  padding: 9px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0, 0, 139, 0.8);
+}
+#submit-btn:hover {
+  cursor: pointer;
+  transform: scale(0.95);
+}
+.error {
+  color: red;
+  padding: 0 24px;
+  font-size: 12px;
+  display: none;
+}
+.show {
+  display: block;
+}
+/* Student Report */
+/* Report Title */
+#report-title {
+  margin-top: 12%;
+  text-align: center;
+  color: darkblue;
+}
+/* search field */
+#search-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-size: 14px;
+}
+#search {
+  width: 50%;
+  margin: 20px;
+  padding: 8px 40px;
+  border-radius: 8px;
+  outline: none;
+}
+#student-report {
+  margin: 0 auto;
+  margin-bottom: 42%;
+  width: 80%;
+  text-align: center;
+}
+table,
+tr,
+th,
+td {
+  border: 2px solid black;
+  border-collapse: collapse;
+  padding: 8px;
+}
+#student-report th {
+  background: darkblue;
+  opacity: 0.8;
+  color: white;
+  font-size: 14px;
+}
+#student-report th:hover {
+  cursor: pointer;
+}
+tr td:first-child::before {
+  counter-increment: Serial;
+  content: Counter(Serial);
+}
+
+/* Edit & Delete Button */
+.btn {
+  border: none;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 8px 16px;
+  box-shadow: 0px 0px 3px black;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+}
+.edit-btn {
+  background: rgb(57, 235, 57);
+  color: white;
+}
+.delete-btn {
+  background: #ff0000;
+}
