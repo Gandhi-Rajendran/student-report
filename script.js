@@ -2,6 +2,7 @@
 var selectedRow = null;
 var form = document.getElementById("student-form");
 var table = document.getElementById("student-report");
+var tableBody = document.getElementById("report-list");
 var removeErrorMsg = () => {
   var errorName = [
     "rollno-error",
@@ -86,9 +87,9 @@ var readFormData = () => {
 };
 
 var insertFormData = (data) => {
-  table.getElementsByTagName("tbody")[0];
+  tableBody.getElementsByTagName("tbody")[0];
 
-  var newRow = table.insertRow(table.length);
+  var newRow = tableBody.insertRow(tableBody.length);
   cell0 = newRow.insertCell(0);
   cell0.innerHTML = "";
   cell1 = newRow.insertCell(1);
